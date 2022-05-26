@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.codeofbrain.magicbows.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "magicbows.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

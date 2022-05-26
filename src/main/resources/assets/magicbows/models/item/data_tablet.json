@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "magicbows:item/data_tablet_off"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "magicbows:on": 1
+      },
+      "model": "magicbows:item/data_tablet_on"
+    }
+  ]
+}
