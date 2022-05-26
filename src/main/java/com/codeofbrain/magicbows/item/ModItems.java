@@ -11,7 +11,5 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MagicBows.MOD_ID);
 
     public static final RegistryObject<ExplosiveBowItem> EXPLOSIVE_BOW = ITEMS.register("explosive_bow", ExplosiveBowItem::new);
-
-    public static final RegistryObject<Item> DATA_TABLET = ITEMS.register("data_tablet",
-            () -> new DataTabletItem(new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(1)));
+    public static final RegistryObject<LightingBowItem> LIGHTING_BOW = ITEMS.register("lighting_bow", LightingBowItem::new);
 }

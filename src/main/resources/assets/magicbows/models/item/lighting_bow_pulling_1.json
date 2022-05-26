@@ -1,0 +1,6 @@
+{
+    "parent": "magicbows:item/lighting_bow",
+    "textures": {
+        "layer0": "magicbows:item/lighting_bow_pulling_1"
+    }
+}

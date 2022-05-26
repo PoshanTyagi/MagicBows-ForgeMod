@@ -8,10 +8,8 @@ import net.minecraft.world.item.Item;
 
 public class ModItemProperties {
     public static void addCustomItemProperties() {
-        ItemProperties.register(ModItems.DATA_TABLET.get(), new ResourceLocation(MagicBows.MOD_ID, "on"),
-                ((pStack, pLevel, pEntity, pSeed) -> pStack.hasTag() ? 1f : 0f));
-
         makeBow(ModItems.EXPLOSIVE_BOW.get());
+        makeBow(ModItems.LIGHTING_BOW.get());
     }
 
     private static void makeBow(Item item) {
@@ -19,7 +17,7 @@ public class ModItemProperties {
             if (p_174637_ == null) {
                 return 0.0F;
             } else {
-                return p_174637_.getUseItem() != p_174635_ ? 0.0F : (float)(p_174635_.getUseDuration() - p_174637_.getUseItemRemainingTicks()) / 20.0F;
+                return p_174637_.getUseItem() != p_174635_ ? 0.0F : (float) (p_174635_.getUseDuration() - p_174637_.getUseItemRemainingTicks()) / 20.0F;
             }
         });
         ItemProperties.register(item, new ResourceLocation("pulling"), (p_174630_, p_174631_, p_174632_, p_174633_) -> {

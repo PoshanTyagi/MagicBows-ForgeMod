@@ -1,6 +1,7 @@
 package com.codeofbrain.magicbows.item;
 
 import com.codeofbrain.magicbows.entity.ExplosiveArrowEntity;
+import com.codeofbrain.magicbows.entity.LightingArrowEntity;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -12,8 +13,8 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 
-public class ExplosiveBowItem extends BowItem {
-    public ExplosiveBowItem() {
+public class LightingBowItem extends BowItem {
+    public LightingBowItem() {
         super(new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(1).durability(500));
     }
 
@@ -36,8 +37,8 @@ public class ExplosiveBowItem extends BowItem {
                 if (!((double) f < 0.1D)) {
                     boolean flag1 = player.getAbilities().instabuild || (itemstack.getItem() instanceof ArrowItem && ((ArrowItem) itemstack.getItem()).isInfinite(itemstack, pStack, player));
                     if (!pLevel.isClientSide) {
-                        ExplosiveArrowEntity abstractarrow = new ExplosiveArrowEntity(player, player.getLevel());
-                        abstractarrow = (ExplosiveArrowEntity) customArrow(abstractarrow);
+                        LightingArrowEntity abstractarrow = new LightingArrowEntity(player, player.getLevel());
+                        abstractarrow = (LightingArrowEntity) customArrow(abstractarrow);
                         abstractarrow.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, f * 3.0F, 1.0F);
 
                         if (f == 1.0F) {
